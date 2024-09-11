@@ -1090,7 +1090,7 @@ padding-bottom: 17px;
 .tituloCarrusel{
     position: absolute;
     left: 3%;
-    top: 24%;
+    top: 6em;
     color: #ffffff;
     font-size: calc(1.375rem + 1.5vw);
 }
@@ -1098,7 +1098,7 @@ padding-bottom: 17px;
 
 position: absolute;
 left: 4%;
-top: 13em;
+top: 14.15em;
 color: #ffffff;
 font-size: 90%;
 }
@@ -1149,6 +1149,7 @@ font-size: 90%;
 .sectionCompra {
 width: 90%;
 flex-wrap: wrap;
+justify-content: center;
 }
 
 .decripcionCompra{
@@ -1169,7 +1170,7 @@ flex-wrap: wrap;
 
 }
 .tituloTipo{
-  height: 181vh;
+  height: 76rem;
 }
 .beneficios ul {
   margin-bottom: 4rem;
@@ -1260,6 +1261,15 @@ display: contents;
 
 .ventanaDelCarrit > .contenidoCarr {
   flex-wrap: wrap;
+}
+
+.textosProd{
+  width: 88%;
+}
+
+.categoria {
+  justify-content: space-around;
+  padding: 3px 50px 3px 50px;
 }
 
 }
