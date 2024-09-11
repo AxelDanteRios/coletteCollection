@@ -86,14 +86,6 @@
 }
 
 
-
-
-
-
-
-
-
-
 .navbar-nav{
     --bs-nav-link-padding-y: -0.5rem;
     /* padding-left: 103px; */
@@ -169,6 +161,7 @@ align-self: center;
 
 .extra{
     display: none;
+    flex-direction: column;
 }
 
 .list-group{
@@ -350,6 +343,7 @@ background-color: #a0a0a0;
 }
 .whatsapp:hover{
   transform: translateY(-5px);
+  transition: 0.5s ease ;
 }
 
   .divfoot{
@@ -359,6 +353,7 @@ background-color: #a0a0a0;
 
 .divfoot img:hover{
   transform: translateY(-5px);
+  transition: 0.5s ease ;
 }
 
 .logoFooter{
@@ -551,7 +546,6 @@ background-color: #a0a0a0;
   .flip-card-front p{
     z-index: 1;
     position: absolute;
-    /* right: 30%; */
     font-size: 3rem;
     color: white;
     font-style: italic;
@@ -726,11 +720,28 @@ width: 90%;
 /* PRODUCTOS */
 
 
+.categoria{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3px 150px 3px 150px;
+  font-size: x-large;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.categoria p:hover {
+  color: #000;
+  transform: translateY(-5px);
+  transition: 0.5s ease ;
+}
+
+
 #shopContenido{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  height: 100rem;
+  /* height: 100rem; */
+  height: auto;
 }
 
 #shopContenido div{
@@ -750,7 +761,8 @@ width: 90%;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 105rem;
+  /* height: 105rem; */
+  height: auto;
 }
 
 div.galeriaProductos {
@@ -772,12 +784,18 @@ div.galeriaProductos {
   border-radius: 4px;
   cursor: pointer;
 }
-/* div.galeriaProductos img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
+
+.eliminar{
+  width: 43px !important;
+  height: 43px !important;
   cursor: pointer;
-} */
+  filter: invert();
+}
+
+.eliminar:hover{
+  transform: translateY(-5px);
+  transition: 0.5s ease ;
+}
 
 .carritoDibujo{
   width: 30px;
@@ -786,6 +804,7 @@ div.galeriaProductos {
 
 .carritoDibujo:hover{
   transform: translateY(-5px);
+  transition: 0.5s ease ;
 }
 .desc {
   padding: 15px 15px 5px 15px;
@@ -810,6 +829,7 @@ div.galeriaProductos {
 
 .suma:hover{
   transform: translateY(-5px);
+  transition: 0.5s ease ;
 }
 
 
@@ -901,8 +921,8 @@ text-align: center;
   z-index: 3;
   top: 12vh;
   scrollbar-color: none;
+  border-radius: 12px;
 }
-
 
 .ventanaDelCarrit::-webkit-scrollbar{
   display: none;
@@ -931,7 +951,7 @@ text-align: center;
   flex-direction: row;
   justify-content:space-around;
   align-items: center;
-  width: 70%; 
+  width: 92%; 
   margin: 10px;
 }
 
@@ -985,6 +1005,7 @@ padding: 5% 0% 5% 0%;
 .divBotonCompra{
   display: flex;
     justify-content: center;
+    padding-bottom: 12px;
 }
 
 .botonCompra {
@@ -1017,14 +1038,73 @@ padding: 5% 0% 5% 0%;
   box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
 }
 
+.descripcionProducto{
+  width: 315px;
+  padding-right: 15px;
+}
+.tituloProducto{
+  padding-top: 5px;
+}
+
+
+
+
+@media (min-width: 1025px) and (max-width: 1280px){
+  .logoSinFondo {
+    width: 22%;
+  }
+
+  .navbar-nav{
+    width: 75%;
+    padding-right: 0%;
+  }
+  .subtituloCarrusel {
+    top: 21em;
+  }
+  .tituloCarrusel {
+    top: 55%;
+  }
+
+
+}
+
+
+
+
+
+
 
 
 
 
 @media (max-width:480px) {
 
+#buscador {
+    width: 65% !important;
+}
+
+.divBotonCompra {
+padding-bottom: 17px;
+}
+
+.tituloCarrusel{
+    position: absolute;
+    left: 3%;
+    top: 24%;
+    color: #ffffff;
+    font-size: calc(1.375rem + 1.5vw);
+}
+.subtituloCarrusel{
+
+position: absolute;
+left: 4%;
+top: 13em;
+color: #ffffff;
+font-size: 90%;
+}
+
 .navbar-collapse {
-  background-color: #65686ffc ;
+  background-color: #FBFCF8 ;
   border-radius: 6%;
   text-align: center;
   height: auto;
@@ -1039,7 +1119,7 @@ padding: 5% 0% 5% 0%;
 
 .navbar-nav{
   padding-right: 0%;
-  --bs-nav-link-padding-y: 0.5rem;
+  --bs-nav-link-padding-y: 1.5rem;
 
 }
 
@@ -1096,10 +1176,6 @@ flex-wrap: wrap;
   padding-left: 4rem;
 }
 
-hr {
-  margin: 2rem 21px 2rem 60px;
-}
-
 .contenido_general {
   height: 30vh;
 }
@@ -1129,9 +1205,9 @@ display: contents;
   }
 
 .extra{
-  display: flex;
   flex-direction: column;
   width: 100%;
+  align-items: center;
 }
 
 .servicios {
